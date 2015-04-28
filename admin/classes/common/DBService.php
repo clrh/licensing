@@ -47,6 +47,7 @@ class DBService extends Object {
 		$password = $this->config->database->password;
 		$databaseName = $this->config->database->name;
 		$this->db = mysqli_connect($host, $username, $password, $databaseName);
+                mysqli_set_charset($this->db, 'utf8');
 		$this->checkForError();
 	}
 
