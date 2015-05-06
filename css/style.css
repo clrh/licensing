@@ -30,13 +30,12 @@ body {
 }
 
 .footer {
-    height: 3em;
+    height: 2em;
     font-size:80%;
-    color:red;
+    color:#526972;
     text-align:center;
-    width:900px;
-    font-style: italic;
-} 
+    width:100%;
+}
 
 
 a {color:#3D545D;font-size:9pt;}
@@ -516,3 +515,4 @@ table.borderedFormTable tr {vertical-align: top;}
     background-image: -o-linear-gradient(top, #c7d3de, #e7eef5);
     background-image: linear-gradient(to bottom, #c7d3de, #e7eef5);
 }
+
