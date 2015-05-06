@@ -31,29 +31,16 @@ include 'templates/header.php';
 $_SESSION['ref_script']=$currentPage;
 //below includes search options in left pane only - the results are refreshed through ajax and placed in div searchResults
 //print header
-<<<<<<< HEAD
-$pageTitle='Calendar';
-=======
 $pageTitle=_('Calendar');
-
->>>>>>> Translated all files PHP
 $config = new Configuration;
 $host = $config->database->host;
 $username = $config->database->username;
 $password = $config->database->password;
 $license_databaseName = $config->database->name;
 $resource_databaseName = $config->settings->resourcesDatabaseName;
-<<<<<<< HEAD
-$link = mysqli_connect($host, $username, $password) or die("Could not connect to host.");
-mysqli_select_db($link, $license_databaseName) or die("Could not find License database.");
-mysqli_select_db($link, $resource_databaseName) or die("Could not find Resource database.");
-=======
-
-$linkID = mysql_connect($host, $username, $password) or die(_("Could not connect to host."));
-mysql_select_db($license_databaseName, $linkID) or die(_("Could not find License database."));
-mysql_select_db($resource_databaseName, $linkID) or die(_("Could not find Resource database."));
-
->>>>>>> Translated all files PHP
+$link = mysqli_connect($host, $username, $password) or die(_("Could not connect to host."));
+mysqli_select_db($link, $license_databaseName) or die(_("Could not find License database."));
+mysqli_select_db($link, $resource_databaseName) or die(_("Could not find Resource database."));
 $display = array();
 $calendarSettings = new CalendarSettings();
 try{
@@ -99,13 +86,8 @@ $result = mysqli_query($link, $query);
 	}
 
 	// Validate the config settings
-<<<<<<< HEAD
 	if ($config_error) {
-		echo "<span style='color:red'>There was an error with the CalendarSettings Configuration.</span>";
-=======
-	if ($config_error) { 
 		echo "<span style='color:red'>"._("There was an error with the CalendarSettings Configuration.")."</span>";
->>>>>>> Translated all files PHP
 		exit;
 	}
 
@@ -130,14 +112,14 @@ $result = mysqli_query($link, $query);
 		$query = $query . " AND `$resource_databaseName`.`Resource`.`resourceTypeID` IN ( ". $resourceType . " ) ";
 	}
 $query = $query . "ORDER BY `sortdate`, `$resource_databaseName`.`Resource`.`titleText`";
-$result = mysqli_query($link, $query) or die("Bad Query Failure");
+$result = mysqli_query($link, $query) or die(_("Bad Query Failure"));
 ?>
 
 <div style='text-align:left;'>
 	<table class="headerTable" style="background-image:url('images/header.gif');background-repeat:no-repeat;">
 		<tr style='vertical-align:top;'>
 			<td>
-				<b><?= _("Upcoming License Renewals");?></b>
+				<b><?php echo _("Upcoming License Renewals");?></b>
 			</td>
 		</tr>
 	</table>
@@ -167,7 +149,7 @@ $result = mysqli_query($link, $query) or die("Bad Query Failure");
 					WHERE
 					  `$resource_databaseName`.`Resource`.`resourceID` = " . $row["resourceID"] .
 					  " order by `$resource_databaseName`.`AuthorizedSite`.`shortName`";
-					$result2 = mysqli_query($link, $query2) or die("Bad Query Failure");
+					$result2 = mysqli_query($link, $query2) or die(_("Bad Query Failure"));
 
 					$i = $i + 1;
 					$html = "";
@@ -233,23 +215,13 @@ $result = mysqli_query($link, $query) or die("Bad Query Failure");
                     if ($interval->invert) {
                         $html = $html . "- <strong style='color:red'>"._("Expired ").$num_days._(" days ago")."</strong>";
                     } else {
-<<<<<<< HEAD
-					    $html = $html . "- Expires in ";
-
-=======
 					    $html = $html . _("- Expires in ");
-					
->>>>>>> Translated all files PHP
+
 						if ($date1 > $date2) {
 							$html = $html . "<span style='color:red'>(" . $num_days . _(" days)")."</span>";
 						} else {
-<<<<<<< HEAD
-							$html = $html . $num_days . " days "; ;
-						}
-=======
 							$html = $html . $num_days . _(" days ");
-						}					
->>>>>>> Translated all files PHP
+						}
 					}
 					$k = 0;
 					$siteID = array();
