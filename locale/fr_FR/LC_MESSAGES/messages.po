@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
-"POT-Creation-Date: 2015-05-15 16:19+0100\n"
+"POT-Creation-Date: 2015-05-26 10:51+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Cesar <hernandez.antonio.cesar19@gmail.com>\n"
 "Language-Team: \n"
@@ -813,29 +813,24 @@ msgstr "Le fichier de la pièce jointe a été supprimé avec succès."
 msgid "Status has been updated"
 msgstr "Le statut a été mit à jour"
 
-#: calendar.php:26 in_progress.php:23 index.php:23 templates/header.php:120
-#: templates/header.php:123 templates/header.php:126
-msgid "Home"
-msgstr "Accueil"
-
-#: calendar.php:44 templates/header.php:120 templates/header.php:123
+#: calendar.php:29 templates/header.php:120 templates/header.php:123
 #: templates/header.php:126
 msgid "Calendar"
 msgstr "Calendrier"
 
-#: calendar.php:54
+#: calendar.php:56
 msgid "Could not connect to host."
 msgstr "Ne pouvait pas se connecter au host."
 
-#: calendar.php:55
+#: calendar.php:57
 msgid "Could not find License database."
 msgstr "N'a pas pu trouver la base de données Licence"
 
-#: calendar.php:56
+#: calendar.php:58
 msgid "Could not find Resource database."
 msgstr "N'a pas pu trouver la base de données Resource."
 
-#: calendar.php:64
+#: calendar.php:66
 msgid ""
 "There was an error with the CalendarSettings Table please verify the table "
 "has been created."
@@ -843,43 +838,43 @@ msgstr ""
 "Il y avait un erreur avec la table CalendarSettings, s'il vous plaît, "
 "verifiez que la table a été créée."
 
-#: calendar.php:95
+#: calendar.php:111
 msgid "There was an error with the CalendarSettings Configuration."
 msgstr "Il y avait un erreur avec la configuation de CalendarSettings."
 
-#: calendar.php:122 calendar.php:162
+#: calendar.php:139 calendar.php:180
 msgid "Bad Query Failure"
 msgstr "Erreur avec la râquete"
 
-#: calendar.php:130
+#: calendar.php:148
 msgid "Upcoming License Renewals"
 msgstr "Renouvellements de licence à venir"
 
-#: calendar.php:222
+#: calendar.php:240
 msgid "No associated licenses available."
 msgstr "Pas des licences associées disponibles."
 
-#: calendar.php:228
+#: calendar.php:246
 msgid "Expired "
 msgstr "Expiré il y a "
 
-#: calendar.php:228
+#: calendar.php:246
 msgid " days ago"
 msgstr " jours"
 
-#: calendar.php:230
+#: calendar.php:248
 msgid "- Expires in "
 msgstr "- Expirerai en "
 
-#: calendar.php:233
+#: calendar.php:251
 msgid " days)"
 msgstr " jours)"
 
-#: calendar.php:235
+#: calendar.php:253
 msgid " days "
 msgstr " jours "
 
-#: calendar.php:247
+#: calendar.php:265
 msgid "Participants:  "
 msgstr "Participants:"
 
@@ -890,6 +885,11 @@ msgstr "Comparaison de l'expression"
 #: compare.php:39
 msgid "Limit by Expression Type:"
 msgstr "Limite par le type d'expression:"
+
+#: in_progress.php:23 index.php:23 templates/header.php:120
+#: templates/header.php:123 templates/header.php:126
+msgid "Home"
+msgstr "Accueil"
 
 #: in_progress.php:33
 msgid "Licenses In Progress"
